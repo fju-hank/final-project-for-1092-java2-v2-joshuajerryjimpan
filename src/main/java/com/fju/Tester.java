@@ -6,6 +6,7 @@ public class Tester {
     public static void main(String[] args) {
         System.out.println("Please enter your parking hours: ");
         Scanner scan = new Scanner(System.in);
+        String time = scan.nextLine();
         int Hours = scan.nextInt();
         int Fee = 0;
         if (Hours <= 2){

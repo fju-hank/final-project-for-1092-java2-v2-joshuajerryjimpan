@@ -1,2 +1,4 @@
 com/fju/Tester.java
  com.fju.Tester
+com/fju/Date.java
+ com.fju.Date
