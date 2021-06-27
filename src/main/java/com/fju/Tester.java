@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Tester {
     public static void main(String[] args) {
-        System.out.println("Please enter the time:");
+        System.out.println("Please enter the time:"+"(form: yyyy/MM/dd/HH:mm)");
         Scanner sc = new Scanner(System.in);
         String hours = sc.nextLine();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd/HH:mm");
@@ -32,6 +32,6 @@ public class Tester {
         } else if (Hours > 9) {
             Fee = Fee + (Hours - 9) * 60 + 4 * 50 + 3 * 40 + 2 * 30;
         }
-        System.out.println("You have already parked for " + Hours + " hours." + "\n" + "Total is " + Fee);
+        System.out.println("You have already parked for  " + Hours + "  hours." + "\n" + "Total is  " + Fee);
     }
 }
