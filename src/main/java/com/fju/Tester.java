@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Tester {
     public static void main(String[] args) {
-        System.out.println("Please enter the time:"+"(form: yyyy/MM/dd/HH:mm)");
+        System.out.println("Please enter the time:"+"\n"+"(form: yyyy/MM/dd/HH:mm"+"\n"+"example: 1990/01/23/08:00)");
         Scanner sc = new Scanner(System.in);
         String hours = sc.nextLine();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd/HH:mm");
