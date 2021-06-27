@@ -2,7 +2,6 @@ package com.fju;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Scanner;
 
 public class Date {
@@ -16,7 +15,7 @@ public class Date {
         try {
             java.util.Date d1 = sdf.parse(hours);
             java.util.Date d2 = sdf.parse(str);
-            long dif = d2.getTime()- d1.getTime();
+            long dif = d2.getTime() - d1.getTime();
             long difhr = dif/(60*60*1000);
             System.out.println(difhr);
         } catch (ParseException e) {
