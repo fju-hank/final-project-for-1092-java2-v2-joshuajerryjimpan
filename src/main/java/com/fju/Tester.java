@@ -1,12 +1,17 @@
 package com.fju;
-
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Tester {
     public static void main(String[] args) {
-        System.out.println("Please enter your parking hours: ");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd/HH:mm");
+        System.out.println("Pleass enter the time"+"(form: yyyy/MM/dd/HH:mm)");
         Scanner scan = new Scanner(System.in);
         String time = scan.nextLine();
+        Calendar c = Calendar.getInstance();
         int Hours = scan.nextInt();
         int Fee = 0;
         if (Hours <= 2){

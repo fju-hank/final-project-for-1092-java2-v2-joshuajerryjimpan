@@ -1,4 +1,6 @@
-com/fju/Tester.java
- com.fju.Tester
+com/fju/Car.java
+ com.fju.Car
 com/fju/Date.java
  com.fju.Date
+com/fju/Tester.java
+ com.fju.Tester
