@@ -39,10 +39,14 @@ public class CarTester {
         System.out.println("(1)Show how many cars in parking lot"+"\n"+"(2)Take Ticket"+"\n"+"(3)Pay Money"+"\n"+"(4)Leave System");
         System.out.printf("Now, there is %d cars in the parking lot, please choose one options =>", number);
         int select = keyin.nextInt();
+        while (select == 4){
+            leave_system();
+            break;
+        }
         return select;
     }
     static void disp_cars() {
-        System.out.printf("Ticket number\t\t"+"\n"+"The enter time"+"\n");
+        System.out.printf("Ticket number\t\t"+"The enter time"+"\n");
         for (int i = 0; i < Ticket.Cars.number; i++) {
             System.out.printf("%d\t\t", Ticket.Cars.car[i].GetTicket());
             System.out.printf("%d hr %d min\n", Ticket.Cars.car[i].entertime[0],
@@ -94,12 +98,10 @@ public class CarTester {
                     Fee = Fee + (Hours - 9) * 60 + 4 * 50 + 3 * 40 + 2 * 30;
                 }
                 System.out.println("You have already parked for  " + Hours + "  hours." + "\n" + "Total is  " + Fee);
-                System.out.println("Thank you for coming, welcome back");
-                break;
+                System.out.println("\n"+"After you payed money, please press <4> to exit");
             }
         }
         if (flag == 0) {
-
             System.out.printf("Don't have this car \n");
             return;
         }
