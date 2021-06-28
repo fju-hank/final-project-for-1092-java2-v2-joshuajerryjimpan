@@ -2,10 +2,10 @@ com/fju/Tester.java
  com.fju.Tester
 com/fju/Date.java
  com.fju.Date
-com/fju/CarTester.java
- com.fju.CarTester
 com/fju/Ticket.java
  com.fju.Ticket
  com.fju.Ticket$CarTicket
  com.fju.Ticket$Cars
  com.fju.Ticket$Clock
+com/fju/CarTester.java
+ com.fju.CarTester

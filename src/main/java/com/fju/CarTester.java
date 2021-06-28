@@ -11,7 +11,7 @@ public class CarTester {
     public static void main(String[] args) {
         number = 0;
         int select = get_menu();
-        while (select != 5){
+        while (select != 4){
             switch (select){
                 case 1:
                     disp_cars();
@@ -35,15 +35,14 @@ public class CarTester {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd/HH:mm");
         java.util.Date current = new java.util.Date();
         String str = sdf.format(current);
-        System.out.println("Welcome to FJU parking lot, "+ str);
+        System.out.println("\n"+"Welcome to FJU parking lot, "+ str);
         System.out.println("(1)Show how many cars in parking lot"+"\n"+"(2)Take Ticket"+"\n"+"(3)Pay Money"+"\n"+"(4)Leave System");
-        System.out.printf("Now, there is %d cars in the parking lot, please choose one options =>", Ticket.Cars.number);
+        System.out.printf("Now, there is %d cars in the parking lot, please choose one options =>", number);
         int select = keyin.nextInt();
-        keyin.nextLine();
         return select;
     }
     static void disp_cars() {
-        System.out.printf("Ticket number\t\tThe time when you enter\n");
+        System.out.printf("Ticket number\t\t"+"\n"+"The enter time"+"\n");
         for (int i = 0; i < Ticket.Cars.number; i++) {
             System.out.printf("%d\t\t", Ticket.Cars.car[i].GetTicket());
             System.out.printf("%d hr %d min\n", Ticket.Cars.car[i].entertime[0],
@@ -56,7 +55,7 @@ public class CarTester {
         Ticket.Cars.car[Ticket.Cars.number].entertime[0] = Ticket.Clock.hour;
         Ticket.Cars.car[Ticket.Cars.number].entertime[1] = Ticket.Clock.minute;
         int ticket = Ticket.Cars.car[Ticket.Cars.number].GetTicket();
-        System.out.printf("Please press <Enter> to get a ticket(Ticket number: %d) =>", ticket);
+        System.out.printf("Please press <Enter> to get a ticket(Ticket number: %d)", ticket);
         keyin.nextLine();
         Ticket.Cars.number = Ticket.Cars.number + 1;
     }
