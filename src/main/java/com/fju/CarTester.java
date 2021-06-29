@@ -81,8 +81,8 @@ public class CarTester {
                 try {
                     java.util.Date d1 = sdf.parse(hours);
                     java.util.Date d2 = sdf.parse(str);
-                    long dif = d1.getTime() - d2.getTime();
-                    long difhr = dif / (60 * 60 * 1000);
+                    long dif = (d2.getTime() - d1.getTime());
+                    long difhr = (dif / (60 * 60 * 1000));
                     Hours = (int) difhr;
                 } catch (ParseException e) {
                     e.printStackTrace();
@@ -97,7 +97,7 @@ public class CarTester {
                 } else if (Hours > 9) {
                     Fee = (Fee + (Hours - 9) * 60 + 4 * 50 + 3 * 40 + 2 * 30);
                 }
-                System.out.println("You have already parked for  " + Hours + "  hours." + "\n" + "Total is  " + Fee);
+                System.out.println("You have already parked for  " + Hours + "  hours." + "\n" + "Total is  " + Math.abs(Fee));
                 System.out.println("\n"+"After you payed money, please press <4> to exit");
             }
         }
