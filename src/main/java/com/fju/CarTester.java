@@ -81,7 +81,7 @@ public class CarTester {
                 try {
                     java.util.Date d1 = sdf.parse(hours);
                     java.util.Date d2 = sdf.parse(str);
-                    long dif = d2.getTime() - d1.getTime();
+                    long dif = d1.getTime() - d2.getTime();
                     long difhr = dif / (60 * 60 * 1000);
                     Hours = (int) difhr;
                 } catch (ParseException e) {
@@ -89,13 +89,13 @@ public class CarTester {
                 }
                 int Fee = 0;
                 if (Hours <= 2) {
-                    Fee = Fee + Hours * 30;
+                    Fee = (Fee + Hours * 30);
                 } else if (Hours > 2 && Hours <= 5) {
-                    Fee = Fee + (Hours - 2) * 40 + 2 * 30;
+                    Fee = (Fee + (Hours - 2) * 40 + 2 * 30);
                 } else if (Hours > 5 && Hours <= 9) {
-                    Fee = Fee + (Hours - 5) * 50 + 3 * 40 + 2 * 30;
+                    Fee = (Fee + (Hours - 5) * 50 + 3 * 40 + 2 * 30);
                 } else if (Hours > 9) {
-                    Fee = Fee + (Hours - 9) * 60 + 4 * 50 + 3 * 40 + 2 * 30;
+                    Fee = (Fee + (Hours - 9) * 60 + 4 * 50 + 3 * 40 + 2 * 30);
                 }
                 System.out.println("You have already parked for  " + Hours + "  hours." + "\n" + "Total is  " + Fee);
                 System.out.println("\n"+"After you payed money, please press <4> to exit");
@@ -107,6 +107,6 @@ public class CarTester {
         }
     }
     static void leave_system(){
-        System.out.println("Thank you for coming, welcome back");
+        System.out.println("\n"+"Thank you for coming, welcome back");
     }
 }
