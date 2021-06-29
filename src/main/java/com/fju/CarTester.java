@@ -46,7 +46,7 @@ public class CarTester {
         return select;
     }
     static void disp_cars() {
-        System.out.printf("Ticket number\t\t"+"The enter time"+"\n");
+        System.out.print("Ticket number\t\t"+"The enter time"+"\n");
         for (int i = 0; i < Ticket.Cars.number; i++) {
             System.out.printf("%d\t\t", Ticket.Cars.car[i].GetTicket());
             System.out.printf("%d hr %d min\n", Ticket.Cars.car[i].entertime[0],
@@ -64,7 +64,7 @@ public class CarTester {
         Ticket.Cars.number = Ticket.Cars.number + 1;
     }
     static void outer_car(){
-        System.out.printf("Pleas show your ticket =>");
+        System.out.println("Pleas show your ticket =>");
         int ticket = keyin.nextInt();
         keyin.nextLine();
         int flag =0, i;
@@ -102,8 +102,7 @@ public class CarTester {
             }
         }
         if (flag == 0) {
-            System.out.printf("Don't have this car \n");
-            return;
+            System.out.println("Don't have this car \n");
         }
     }
     static void leave_system(){
